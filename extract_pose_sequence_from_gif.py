@@ -1,4 +1,4 @@
-# ✅ extract_pose_sequence_from_gif.py - 增强：输出每帧关键点可视图像
+# ✅ extract_pose_sequence_from_gif.py 
 
 import cv2
 import mediapipe as mp
@@ -44,7 +44,7 @@ for idx, frame in enumerate(frames):
         keypoints = [[l.x, l.y] for l in landmarks]
         pose_sequence.append(keypoints)
 
-        # 可视化
+        # visualization
         annotated = frame.copy()
         h, w = annotated.shape[:2]
         for l in landmarks:
